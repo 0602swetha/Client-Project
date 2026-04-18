@@ -5,7 +5,7 @@ body {
 
 .top {
     position: fixed;
-    top: 0;
+    top: 10px;
     width: 100%;
     z-index: 1000;
 }
@@ -220,7 +220,7 @@ p {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-150%);
   }
 }
 @media (max-width: 768px) {
