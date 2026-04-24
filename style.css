@@ -46,7 +46,7 @@ p {
 .logo img {
     height: 100px;
     margin-left: 30px;
-   
+
 }
 
 .nav-links {
@@ -95,7 +95,7 @@ p {
     z-index: 2;
 }
 
-.confidence {
+.element {
     color: #ff6a00;
 }
 
@@ -156,74 +156,210 @@ p {
 
 
 .marquee-wrapper {
-  position: relative;
-  overflow: hidden;
-  background: #000;
-  padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    padding: 40px 0;
+    margin-bottom: 8%;
 }
 
 /* 🔥 Fade edges (left + right blur effect) */
 .marquee-wrapper::before,
 .marquee-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 40%; /* 👈 your requirement */
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 40%;
+    /* 👈 your requirement */
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .marquee-wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, black, transparent);
+    left: 0;
+    background: linear-gradient(to right, black, transparent);
 }
 
 .marquee-wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, black, transparent);
+    right: 0;
+    background: linear-gradient(to left, black, transparent);
 }
 
 /* scrolling track */
 .marquee-track {
-  display: flex;
-  gap: 100px;
-  animation: scroll 15s linear infinite;
+    display: flex;
+    gap: 100px;
+    animation: scroll 15s linear infinite;
 }
 
 /* each item */
 .item {
-  min-width: 180px;
-  text-align: center;
-  color: white;
+    min-width: 180px;
+    text-align: center;
+    color: white;
 }
 
 /* NUMBER */
 .item h2 {
-  font-size: 48px;
-  color: white;
-  margin: 0;              /* 🔥 remove default margin */
-  line-height: 1;         /* tighten spacing */
+    font-size: 48px;
+    color: white;
+    margin: 0;
+    /* 🔥 remove default margin */
+    line-height: 1;
+    /* tighten spacing */
 }
 
 /* TEXT */
 .item p {
-  font-size: 20px;
-  color: white;
-  margin: 5px 0 0 0;  
-   font-family: "Montserrat", sans-serif;    /* 🔥 small gap only */
+    font-size: 20px;
+    color: white;
+    margin: 5px 0 0 0;
+    font-family: "Montserrat", sans-serif;
+    /* 🔥 small gap only */
 }
 
 /* animation */
 @keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-150%);
-  }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
 }
+
+.benefits strong{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 30%;
+    margin-top: 10%;
+    font-size: 70px;
+}
+
+.benefits span {
+    color: #ff6a00;
+}
+
+/* GRID (2 cards per row) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   row-gap: 10px;
+    column-gap: -50px;
+    margin-top: 15px;
+     margin-left: 150px;
+     margin-right: 90px;
+}
+
+/* CARD DESIGN */
+.card {
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    border: 1px solid #222;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    width: 85%;
+   margin-bottom: 2px;
+
+  
+   
+}
+
+/* ICON */
+.card img {
+    width: 150px;
+    height: 150px;
+
+    
+}
+
+/* TEXT */
+.card h3 {
+     font-family: "Montserrat", sans-serif;
+    color: #fff;
+    margin: 0;
+    font-size: 30px;
+}
+
+.card p {
+    color: #aaa;
+    margin-top: 8px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+/* 🔥 HOVER EFFECT */
+.card:hover {
+    transform: scale(1.05);
+    border: 1px solid transparent;
+}
+
+/* 🔥 FIRE BORDER EFFECT */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 2px;
+    background: linear-gradient(45deg, orange, red, orange);
+    -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* SHOW BORDER ON HOVER */
+.card:hover::before {
+    opacity: 1;
+}
+
+
+.spot{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    margin-left:10px;
+}
+.spot a{
+      color: white;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: rgb(255, 106, 0);
+    
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+    padding: 15px 90px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
+
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -232,5 +368,13 @@ p {
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    /* 🔥 Responsive (Mobile) */
+
+ 
+
+    .container {
+        grid-template-columns: 1fr;
     }
 }
