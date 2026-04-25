@@ -230,7 +230,7 @@ p {
     }
 }
 
-.benefits strong{
+.benefits strong {
     color: white;
     font-family: "Montserrat", sans-serif;
     margin-left: 30%;
@@ -246,11 +246,11 @@ p {
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-   row-gap: 10px;
+    row-gap: 10px;
     column-gap: -50px;
     margin-top: 15px;
-     margin-left: 150px;
-     margin-right: 90px;
+    margin-left: 150px;
+    margin-right: 90px;
 }
 
 /* CARD DESIGN */
@@ -260,16 +260,16 @@ p {
     padding: 20px;
     display: flex;
     align-items: center;
-    gap:5px;
+    gap: 20px;
     border: 1px solid #222;
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
     width: 85%;
-   margin-bottom: 2px;
+    margin-bottom: 2px;
 
-  
-   
+
+
 }
 
 /* ICON */
@@ -277,12 +277,12 @@ p {
     width: 150px;
     height: 150px;
 
-    
+
 }
 
 /* TEXT */
 .card h3 {
-     font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #fff;
     margin: 0;
     font-size: 30px;
@@ -310,11 +310,11 @@ p {
     border-radius: 15px;
     padding: 2px;
     background: linear-gradient(45deg, orange, red, orange);
-    -webkit-mask: 
-        linear-gradient(#000 0 0) content-box, 
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
         linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
-            mask-composite: exclude;
+    mask-composite: exclude;
     opacity: 0;
     transition: 0.4s;
 }
@@ -325,24 +325,25 @@ p {
 }
 
 
-.spot{
+.spot {
     color: white;
     font-family: "Montserrat", sans-serif;
     text-align: center;
     margin-top: 40px;
     font-size: 18px;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     position: relative;
     z-index: 2;
-    margin-left:10px;
+    margin-left: 10px;
 }
-.spot a{
-      color: white;
+
+.spot a {
+    color: white;
     font-weight: 500;
     font-size: 20px;
     background-color: rgb(255, 106, 0);
-    
-    font-family: Montserrat, sans-serif;
+
+    font-family: "Montserrat", sans-serif;
     text-decoration: none;
     padding: 15px 90px;
     border-radius: 10px;
@@ -350,6 +351,129 @@ p {
 
 
 
+.process-section {
+    padding: 80px 20px;
+    background: #141414;
+}
+
+.progress-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.title {
+    font-size: 80px;
+    /* font-weight: 700; */
+    text-align: center;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.title span {
+    color: #ff6a00;
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 60px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 60px;
+    margin-left: 15%;
+
+}
+
+/* vertical line */
+.progress-line {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+    width: 8px;
+    height: 75%;
+    background: #222;
+}
+
+.progress {
+    width: 100%;
+    height: 0;
+    background: #ff6a00;
+    transition: height 0.3s ease;
+    border-radius: 10px;
+}
+
+/* cards */
+.card1 {
+    background: #000000;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: 0.3s;
+    width: 60%;
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+}
+
+/* big number */
+.number {
+    font-size: 200px;
+    font-weight: 800;
+    background: linear-gradient(#aaa, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* text */
+.progress-content h2 {
+    margin: 0;
+    font-size: 30px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.progress-content p {
+    color: #aaa;
+    font-family: "Montserrat", sans-serif;
+}
+
+.progress-spot {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+
+    position: relative;
+    z-index: 2;
+    margin-left: 10px;
+}
+
+.progress-spot a {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: rgb(255, 106, 0);
+
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    padding: 15px 90px;
+    border-radius: 10px;
+}
+
+.progress-para p {
+    color: white;
+    margin-left: 33%;
+    margin-top: 30px;
+    font-family: "Montserrat", sans-serif;
+}
 
 
 
@@ -372,7 +496,7 @@ p {
 
     /* 🔥 Responsive (Mobile) */
 
- 
+
 
     .container {
         grid-template-columns: 1fr;
