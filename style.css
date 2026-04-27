@@ -1128,71 +1128,213 @@ html {
 
 
 
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 33px;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    position: fixed;
+   
+    left: 0;
+    top: 73px;
+    height: calc(100vh - 48px);
+    background: #000;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: 0.4s ease;
+    width: 100%;
+}
+.top {
+    z-index: 1001;                /* stays ABOVE mobile menu */
+}
+/* SHOW MENU */
+.mobile-menu.active {
+    transform: translateY(0);
+}
+
+/* TOP BAR IN MENU */
+.mobile-top {
+    position: absolute;
+    top: 57px;
+    
+    right: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-logo {
+    height: 117px;
+}
+
+#close-menu {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* LINKS */
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+}
+
+.mobile-links a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.mobile-links a {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s forwards;
+}
 
 
 
+.mobile-links a:nth-child(1) { animation-delay: 0.1s; }
+.mobile-links a:nth-child(2) { animation-delay: 0.2s; }
+.mobile-links a:nth-child(3) { animation-delay: 0.3s; }
+.mobile-links a:nth-child(4) { animation-delay: 0.4s; }
+.mobile-links a:nth-child(5) { animation-delay: 0.5s; }
+.mobile-links a:nth-child(6) { animation-delay: 0.6s; }
 
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-
-
+/* 🔥 RESPONSIVE */
 @media (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none; /* hide desktop */
     }
 
-    /* 🔥 Responsive (Mobile) */
-
-
-
-    .container {
-        grid-template-columns: 1fr;
+    .menu-toggle {
+        display: block; /* show hamburger */
     }
 
-      .proof-section {
-        padding: 50px 16px 70px;
+    .navbar {
+        left: -4%;
+        right: -3%;
+        padding: 10px;
     }
 
-    .proof-title {
-        font-size: 42px;
-        line-height: 1.05;
-        letter-spacing: -1px;
+    .logo img {
+        height: 60px;
     }
 
-    .proof-subtitle {
-        font-size: 17px;
-    }
-
-    .proof-card {
-        padding: 30px 22px;
-    }
-
-    .proof-user h3 {
-        font-size: 24px;
-    }
-
-    .proof-user p {
-        font-size: 18px;
-    }
-
-    .proof-text {
-        font-size: 17px;
-    }
-
-      .proof-title {
-        font-size: 56px;
-    }
-
-    .proof-cards {
-        grid-template-columns: 1fr;
-        max-width: 650px;
-        margin: 0 auto;
-    }
-    
+    .join-btn {
+    padding: 5px 10px;
+    margin-right: 110px;
+   
 }
+
+.content{
+    margin-top: 25%;
+    font-size: 45px;
+}
+#bg-video {
+    top: 32%;
+    left: 18%;
+    width: 65%;
+}
+
+.para p{
+    font-size: 15px;
+    margin-top: -161px;
+}
+.para a{
+    margin-left: 25%;
+    padding: 12px 71px;
+}
+
+.para .con{
+    font-size: 16px;
+
+}
+.container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 20px;
+    row-gap: 17px;
+    column-gap: 68px;
+    width: 90%;
+    margin-top: 25px;
+}
+
+    .card {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .benefits strong {
+        font-size: 40px;
+        margin-left: 0;
+        text-align: center;
+        display: block;
+    }
+    .title{
+        font-size: 48px;
+    }
+
+    .subtitle{
+        font-size: 15px;
+    }
+
+    .timeline {
+  
+    margin-left: -2%;
+}
+
+.card1{
+    width: 88%;
+}
+
+.number {
+    font-size: 150px;
+}
+
+.progress-content h2{
+    font-size: 25px;
+}
+
+.progress-content p{
+    font-size: 13px;
+}
+
+.progress-para p {
+   
+    margin-left: 15%;
+   font-size: 16px;
+}
+}
+
+
+
+
+
+

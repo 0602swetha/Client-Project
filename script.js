@@ -31,4 +31,22 @@ const faqItems = document.querySelectorAll(".faq-item");
     });
 
 
+   
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuBtn = document.getElementById("menu-toggle");
+    const closeBtn = document.getElementById("close-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+    });
+
+});
+
+
     
