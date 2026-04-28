@@ -64,7 +64,7 @@ p {
     transition: 0.3s;
     /* background-color: #262626; */
     font-family: "Montserrat", sans-serif;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .join-btn {
@@ -78,6 +78,7 @@ p {
     margin-left: 110px;
     font-size: 29px;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 .join-btn:hover {
@@ -833,7 +834,7 @@ ul li::after {
 }
 
 .faq-title span {
-    color: #24d51f;
+    color: #ff6a00;
 }
 
 .faq-list {
@@ -851,7 +852,7 @@ ul li::after {
 }
 
 .faq-item:hover {
-    border-color: rgba(36, 213, 31, 0.45);
+    border-color: #ff6a00;
 }
 
 .faq-item summary {
@@ -915,7 +916,7 @@ ul li::after {
 }
 
 .faq-item[open] .faq-icon {
-    background: #24d51f;
+    background: #ff6a00;
 }
 
 .faq-item[open] .faq-icon::before {
@@ -1140,10 +1141,10 @@ html {
 /* MOBILE MENU */
 .mobile-menu {
     position: fixed;
-   
+   display: none;
     left: 0;
-    top: 73px;
-    height: calc(100vh - 48px);
+    top: 50px;
+    height: 660px;
     background: #000;
     z-index: 1000;
     display: flex;
@@ -1222,21 +1223,24 @@ html {
 }
 
 /* 🔥 RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
     .nav-links {
         display: none; /* hide desktop */
     }
+
+
 
     .menu-toggle {
         display: block; /* show hamburger */
     }
 
     .navbar {
-        left: -4%;
-        right: -3%;
-        padding: 10px;
-    }
+    width: 100%;
+    padding: 10px 15px;
+    left: 0;
+    right: 0;
+}
 
     .logo img {
         height: 60px;
@@ -1244,7 +1248,8 @@ html {
 
     .join-btn {
     padding: 5px 10px;
-    margin-right: 110px;
+   margin: 0 auto;
+
    
 }
 
@@ -1331,7 +1336,84 @@ html {
     margin-left: 15%;
    font-size: 16px;
 }
+
+.pricing-section .title{
+    margin-bottom: -20px;
 }
+
+.pricing-section .subtitle{
+    font-size: 14px;
+    margin-bottom: -42px;
+}
+
+.card0{
+    width: 65%;
+}
+
+.proof-title{
+    font-size: 45px;
+}
+
+.proof-subtitle{
+    font-size: 14px;
+}
+
+
+.proof-cards {
+   
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cta-title{
+    font-size: 62px;
+}
+
+.cta-subtitle{
+    font-size: 12px;
+}
+
+.faq-title{
+    font-size: 45px;
+}
+
+.faq-item{
+    width: 65%;
+    margin-left: 120px;
+}
+
+
+.faq-item summary {
+    padding: 2px 24px;
+    font-size: 17px;
+}
+
+.help-title{
+    font-size: 35px;
+}
+
+.help-subtitle{
+    font-size: 10px;
+}
+
+.help-btn{
+    width: 200px;
+}
+
+.contact-title{
+    font-size: 55px;
+}
+
+.contact-subtitle{
+    font-size: 14px;
+}
+
+.contact-form-box{
+    width: 50%;
+   margin: 0 auto;
+}
+}
+
+
 
 
 

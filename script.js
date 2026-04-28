@@ -38,15 +38,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeBtn = document.getElementById("close-menu");
     const mobileMenu = document.getElementById("mobile-menu");
 
+    // Open menu
     menuBtn.addEventListener("click", () => {
         mobileMenu.classList.add("active");
     });
 
+    // Close menu
     closeBtn.addEventListener("click", () => {
         mobileMenu.classList.remove("active");
     });
 
+    // 🔥 FIX: Reset when resizing to desktop
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+            mobileMenu.classList.remove("active");
+        }
+    });
+
 });
+
+
+
+
 
 
     
