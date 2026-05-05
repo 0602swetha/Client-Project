@@ -1130,7 +1130,34 @@ html {
     font-family: "Montserrat", sans-serif;
 }
 
+.disclaimer {
+    background: #141414; /* dark blue/black */
+    color: #e2e8f0;
+    padding: 50px 20px;
+    text-align: center;
+}
 
+.disclaimer .title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ff6a00; /* green highlight */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.disclaimer p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #cbd5f5;
+    text-align: left;
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #ff6a00;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
 
 /* HAMBURGER */
 .menu-toggle {
