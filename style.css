@@ -127,7 +127,7 @@ p {
     color: #858585;
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    margin-top: -15%;
+    margin-top: -12%;
     font-size: 18px;
     margin-bottom: 0;
     position: relative;
@@ -1256,12 +1256,7 @@ html {
 
 
 
-@media (max-width: 1045px) {
-    .navbar{
-        
-    }
-   
-}
+
 
 /* 🔥 RESPONSIVE */
 @media (max-width:768px) {
@@ -1452,7 +1447,136 @@ html {
     width: 50%;
    margin: 0 auto;
 }
+
+
+
+   
+
 }
+
+@media only screen and (max-width: 35.9375em){
+
+.navbar {
+    top: 92px;
+     
+     border-radius: 1px;
+}
+
+
+.content {
+    margin-top: 57%;
+    font-size: 30px;
+}
+
+#bg-video {
+    top: 50%;
+    left: 11%;
+    width: 84%;
+    height: 58%;
+}
+
+.para p {
+    font-size: 14px;
+    margin-top: -276px;
+}
+
+.para a {
+    margin-left: 8%;
+    padding: 11px 41px;
+}
+
+.container {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px 15px;
+}
+
+.title {
+    font-size: 31px;
+}
+
+.process-section {
+    padding: 78px 20px;
+    background: #141414;
+    margin-left: -6px;
+    margin-right: -54px;
+}
+
+.progress-line{
+    display: none;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: -19%;
+    width: 98%;
+margin-bottom: 10px;
+}
+
+.progress-spot {
+    
+    
+    margin-left: -2px;
+}
+
+
+.progress-para p {
+    margin-left: 1%;
+    
+}
+
+.pricing-cards {
+  
+    margin-left: 14%;
+}
+
+.proof-title {
+    font-size: 27px;
+}
+
+.proof-subtitle {
+    font-size: 19px;
+}
+
+.cta-title {
+    font-size: 20px;
+    margin-top: -24%;
+}
+
+.faq-title {
+    font-size: 35px;
+}
+
+
+.faq-item {
+    width: 120%;
+    margin-left: -9px;
+}
+
+.contact-container {
+  
+    margin: -89px auto;
+   
+}
+
+.contact-form-box {
+    width: 100%;
+   
+}
+
+.disclaimer{
+   
+    margin-top: 40px;
+    margin-left: -16px;
+    margin-right: -15%;
+}
+}
+
+
+
+
+
+
 
 
 
