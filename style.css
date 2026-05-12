@@ -1,88 +1,92 @@
-body {
-    background: #000000;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
 }
 
 .top {
     position: fixed;
-    top: 10px;
+    top: 0;
     width: 100%;
     z-index: 1000;
 }
 
 .top p {
-
     color: #ffffff;
     font-weight: 400;
     text-align: center;
     background: #262626;
-    padding: 16px;
-    margin: -9px;
+    padding: 16px 12px;
+    margin: 0;
 }
 
 p {
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.6;
     letter-spacing: 0.07px;
-    font-family: "Montserrat", sans-serif;
 }
-
 
 .navbar {
     position: fixed;
     top: 70px;
-    /* height of top bar */
-    left: 13%;
-    right: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1190px, calc(100% - 32px));
     z-index: 999;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #262626;
     border-radius: 35px;
-    padding: 15px;
+    padding: 15px 20px;
 }
 
 .logo img {
-    
-    margin-left: 40px;
-    width: 30%;
-
+    display: block;
+    max-width: 66px;
+    width: auto;
+    height: auto;
 }
 
 .nav-links {
-    /* background-color: #262626; */
     display: flex;
     align-items: center;
-    gap: 30px;
-    margin-right: 5%
-    
+    gap: 65px;
+    margin-right: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
+    font-size: 1rem;
     transition: 0.3s;
-    /* background-color: #262626; */
     font-family: "Montserrat", sans-serif;
-    
 }
 
 .join-btn {
-    padding: 20px 30px;
+    padding: 14px 26px;
     border: none;
     background: #ff6a00;
-      color: black !important;
-    border-radius: 5px;
+    color: black !important;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
-   
-    font-size: 25px !important;
-    border-radius: 10px;
-    margin-left: 100px;
-    
+    font-size: 1rem !important;
+    margin-left: 1rem;
 }
 
 .join-btn:hover {
@@ -93,41 +97,49 @@ p {
     color: white;
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    margin-top: 13%;
-    font-size: 80px;
-    margin-bottom: 0;
+    max-width: min(50%, 900px);
+    width: min(50%, 100%);
+    margin: 12% 25% 0;
+    font-size: clamp(4.5rem, 2vw, 50px);
     position: relative;
     z-index: 2;
 }
 
 .element {
-    color: #ff6a00;}
+    color: #ff6a00;
+}
 
 
 .video {
-
     position: relative;
-    height: 100vh;
-    /* full screen */
+    width: min(50%, 900px);
+    max-width: 100%;
+    min-height: 60vh;
+    margin: 2rem auto 0;
     overflow: hidden;
 }
 
 #bg-video {
-
     position: absolute;
-    top: 40%;
-    left: 30%;
-    width: 40%;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+.para {
+    max-width: min(50%, 900px);
+    width: min(50%, 100%);
+    margin: 2rem auto 0;
 }
 
 .para p {
     color: #858585;
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    margin-top: -12%;
+    margin-top: 0;
     font-size: 18px;
     margin-bottom: 0;
     position: relative;
@@ -137,15 +149,15 @@ p {
 
 
 .para a {
+    display: inline-block;
     color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 20px;
     background-color: #ff6a00;
-    padding: 15px 80px;
+    padding: 15px 40px;
     border-radius: 10px;
-    margin-left: 40%;
-
+    margin: 0 30%;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -153,8 +165,7 @@ p {
     color: white;
     font-size: 18px;
     text-align: center;
-    margin-top: 40px;
-    margin-left: 25px;
+    margin: 40px auto 0;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -420,7 +431,7 @@ p {
     gap: 20px;
     align-items: center;
     transition: 0.3s;
-    width: 60%;
+    width: 85%;
 }
 
 .card1:hover {
@@ -475,7 +486,7 @@ p {
 
 .progress-para p {
     color: white;
-    margin-left: 33%;
+    margin-left: 35%;
     margin-top: 30px;
     font-family: "Montserrat", sans-serif;
 }
@@ -500,7 +511,7 @@ p {
     border-radius: 20px;
     padding: 55px 30px 30px;
     width: 20%;
-    min-width: 280px;
+    min-width: 500px;
     position: relative; /* important */
     transition: 0.3s;
     border: 1px solid rgba(255,255,255,0.05);
@@ -1258,68 +1269,171 @@ html {
 
 
 
-/* 🔥 RESPONSIVE */
-@media (max-width:768px) {
 
+
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        width: calc(100% - 24px);
+        border-radius: 30px;
+        padding: 12px 16px;
+        top: 68px;
+       
+    }
     .nav-links {
-        display: none; /* hide desktop */
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    margin-right: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+    .logo img {
+        max-width:75px;
+    }
+    .join-btn {
+        padding: 12px 22px;
+        font-size: 0.95rem !important;
+    }
+    .content {
+        margin-top: 13rem;
+        font-size: clamp(3rem, 2vw, 4.5rem);
+        padding: 0 20px;
+    }
+    .para {
+        margin-top: 0rem;
+        padding: 0 20px;
+    }
+    .para p {
+        font-size: 0.98rem;
+    }
+    .para a {
+        padding: 12px 27px;
+        width: 64%;
+    margin-left: 15%;   
+ }
+
+ .card{
+        width: 97%;
+        flex-direction: column;
+ }
+    .benefits strong {
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
     }
 
+    .title{
+        font-size: clamp(3rem, 4vw, 5.5rem);
+    }
 
+.card1{
+    width: 90%;
+}
+
+.progress-para p {
+     margin-left: 22%;
+ }
+  
+ .card0{
+    width: 45%;
+ }
+.proof-title{
+    font-size: clamp(3.5rem, 4vw, 3.5rem);
+}
+
+.cta-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.faq-title{
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.faq-item{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.help-title{
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+
+}
+
+.help-subtitle{
+    font-size: 0.95rem;
+}
+
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
 
     .menu-toggle {
-        display: block; /* show hamburger */
+        display: block;
     }
 
     .navbar {
-    width: 100%;
-    padding: 10px 15px;
-    left: 0;
-    right: 0;
-}
+        width: 100%;
+        top: 60px;
+        padding: 12px 18px;
+        border-radius: 0;
+    }
 
     .logo img {
-        height: 60px;
+        max-width: 65px;
     }
 
     .join-btn {
-    padding: 5px 10px;
-   margin: 0 auto;
+        padding: 10px 18px;
+        margin-left: 0;
+    }
 
-   
-}
+    .content {
+        width: min(90%, 500px);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 14rem;
+        font-size: clamp(3rem, 2vw, 3.8rem);
+    }
 
-.content{
-    margin-top: 25%;
-    font-size: 45px;
-}
-#bg-video {
-    top: 32%;
-    left: 18%;
-    width: 65%;
-}
+    .video {
+        width: min(90%, 900px);
+        min-height: 60vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.para p{
-    font-size: 15px;
-    margin-top: -161px;
-}
-.para a{
-    margin-left: 25%;
-    padding: 12px 71px;
-}
+    .para {
+        width: min(90%, 900px);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5rem;
+    }
 
-.para .con{
-    font-size: 16px;
+    .para p {
+        font-size: 0.96rem;
+    }
 
-}
-.container {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 20px;
-    row-gap: 17px;
-    column-gap: 68px;
-    width: 90%;
-    margin-top: 25px;
-}
+    .para a {
+        display: inline-block;
+        padding: 10px 24px;
+        margin: 1rem auto 0;
+        width: 86%;
+    }
+
+    .para .con {
+        font-size: 0.95rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 16px;
+        row-gap: 18px;
+        column-gap: 28px;
+        width: auto;
+    }
 
     .card {
         width: 100%;
@@ -1334,242 +1448,268 @@ html {
 
     .benefits strong {
         font-size: 40px;
-        margin-left: 0;
-        text-align: center;
-        display: block;
-    }
-    .title{
-        font-size: 48px;
+        margin-left: 20%;
     }
 
-    .subtitle{
-        font-size: 15px;
+    .title {
+        font-size: 42px;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
     }
 
     .timeline {
-  
-    margin-left: -2%;
-}
+        margin-left: 0;
+    }
 
-.card1{
-    width: 88%;
-}
+    .card1 {
+        width: 100%;
+    }
 
-.number {
-    font-size: 150px;
-}
+    .number {
+        font-size: 120px;
+    }
 
-.progress-content h2{
-    font-size: 25px;
-}
+    .progress-content h2 {
+        font-size: 24px;
+    }
 
-.progress-content p{
-    font-size: 13px;
-}
+    .progress-content p {
+        font-size: 0.95rem;
+    }
 
-.progress-para p {
+    .progress-para p {
+        margin-left: 20%;
+        font-size: 0.95rem;
+    }
+
+    .pricing-section .title {
+        margin-bottom: 0;
+    }
+
+    .pricing-section .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+
+    .card0 {
+        width: 60%;
+    }
+
+    .proof-title {
+        font-size: 38px;
+    }
+
+    .proof-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .proof-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .cta-title {
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+    }
+
+    .cta-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .faq-title {
+        font-size: 34px;
+    }
+
+   .faq-item {
+    width: 80%;
+    margin-left: 10%;
+}
+    .faq-item summary {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .contact-form-box label {
    
+    margin-top: 5%;
+}
+
+
+
+.submit-btn{
+        margin: 10px auto 10px;
+}
+
+    .help-title {
+        font-size: 32px;
+    }
+
+    .help-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .help-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .contact-title {
+        font-size: 38px;
+    }
+
+    .contact-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .contact-form-box {
+        width: 85%;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+
+    .disclaimer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .navbar {
+        top: 100px;
+        border-radius: 0;
+    }
+
+    .content {
+        width: min(100%, 700px);
+        max-width: 540px;
+        margin-left: 8%;
+        margin-right: auto;
+        margin-top: 14rem;
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        line-height: 1.1;
+        padding: 0 12px;
+        white-space: normal;
+    }
+
+    .video {
+        width: min(92%, 700px);
+        margin-left: 18%;
+        margin-right: auto;
+    }
+
+    #bg-video {
+   
+    top: -55px;
+
+    }
+
+    
+    
+
+    .para p {
+        margin-top: -55px;
+        font-size: 0.92rem;
+    }
+
+    .para a {
+        display: block;
+        width: 150%;
+        
+        margin: 1rem auto 0;
+        padding: 10px 22px;
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 20px 12px;
+    }
+
+    .benefits strong {
+    font-size: 23px;
     margin-left: 15%;
-   font-size: 16px;
 }
 
-.pricing-section .title{
-    margin-bottom: -20px;
-}
-
-.pricing-section .subtitle{
-    font-size: 14px;
-    margin-bottom: -42px;
-}
-
-.card0{
-    width: 65%;
-}
-
-.proof-title{
-    font-size: 45px;
-}
-
-.proof-subtitle{
-    font-size: 14px;
-}
-
-
-.proof-cards {
+.card {
    
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.cta-title{
-    font-size: 62px;
-}
-
-.cta-subtitle{
-    font-size: 12px;
-}
-
-.faq-title{
-    font-size: 45px;
-}
-
-.faq-item{
-    width: 65%;
-    margin-left: 120px;
-}
-
-
-.faq-item summary {
-    padding: 2px 24px;
-    font-size: 17px;
-}
-
-.help-title{
-    font-size: 35px;
-}
-
-.help-subtitle{
-    font-size: 10px;
-}
-
-.help-btn{
-    width: 200px;
-}
-
-.contact-title{
-    font-size: 55px;
-}
-
-.contact-subtitle{
-    font-size: 14px;
-}
-
-.contact-form-box{
-    width: 50%;
-   margin: 0 auto;
-}
-
-
-
-   
-
-}
-
-@media only screen and (max-width: 35.9375em){
-
-.navbar {
-    top: 92px;
-     
-     border-radius: 1px;
-}
-
-
-.content {
-    margin-top: 57%;
-    font-size: 30px;
-}
-
-#bg-video {
-    top: 50%;
-    left: 11%;
-    width: 84%;
-    height: 58%;
-}
-
-.para p {
-    font-size: 14px;
-    margin-top: -276px;
-}
-
-.para a {
-    margin-left: 8%;
-    padding: 11px 41px;
-}
-
-.container {
-        grid-template-columns: repeat(1, 1fr);
-        margin: 20px 15px;
-}
-
-.title {
-    font-size: 31px;
+    margin-left:12%;
 }
 
 .process-section {
-    padding: 78px 20px;
-    background: #141414;
-    margin-left: -6px;
-    margin-right: -54px;
+  
+    width: 121%;
+}
+
+.card1 {
+    flex-direction: column;
+    width: 115%;
+    margin: 0 -57px 40px;
 }
 
 .progress-line{
     display: none;
 }
 
-.card1 {
-    display: flex;
-    flex-direction: column;
-    margin-left: -19%;
-    width: 98%;
-margin-bottom: 10px;
+
+.pricing-section .title,
+.proof-title,
+ .cta-title,
+ .cta-subtitle,
+ .cta-btn,
+ .faq-title,
+ .help-title,
+ .help-subtitle,
+ .help-btn,
+ .contact-title,
+ .contact-subtitle
+ .content, {
+   
+    margin-left: 20%;
 }
 
-.progress-spot {
-    
-    
-    margin-left: -2px;
-}
-
-
-.progress-para p {
-    margin-left: 1%;
-    
-}
-
-.pricing-cards {
-  
+.pricing-section .subtitle{
+   
     margin-left: 14%;
 }
 
-.proof-title {
-    font-size: 27px;
+.card0{
+   min-width: 381px;
+   margin-left: 25%;
 }
 
-.proof-subtitle {
-    font-size: 19px;
+    .title,
+    .proof-title,
+    .faq-title,
+    .contact-title,
+    .cta-title {
+        font-size: 28px;
+       
+    }
+
+
+    .proof-subtitle {
+    font-size: 12px;
+    margin-left: 10%;
 }
+    .faq-item {
+        width: 100%;
+        margin-left: 10%;
+    }
 
-.cta-title {
-    font-size: 20px;
-    margin-top: -24%;
-}
-
-.faq-title {
-    font-size: 35px;
-}
-
-
-.faq-item {
-    width: 120%;
-    margin-left: -9px;
-}
-
-.contact-container {
-  
-    margin: -89px auto;
-   
-}
-
-.contact-form-box {
+   .contact-form-box {
+    padding: 23px;
     width: 100%;
-   
+    margin-left: 10%;
 }
 
-.disclaimer{
-   
-    margin-top: 40px;
-    margin-left: -16px;
-    margin-right: -15%;
+   .disclaimer {
+    margin-left: 1px;
+    margin-right: -85px;
 }
+
+   
 }
 
 
